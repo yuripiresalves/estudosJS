@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Curso JavaScript</title>
+    </head>
+    <body>       
+        <script>
+            var endereco = {
+                rua: "Rua dos pinheiros",
+                numero: 476,
+                bairro: "Jd. Três Lagoas",
+                cidade: "Maringá",
+                uf: "PR"
+            };
+
+            function exibeEndereco() {
+                var frase;
+                frase = "O usuário mora em " + endereco.cidade + " / " + endereco.uf + ", no bairro " + endereco.bairro + ", na rua " + endereco.rua + " com nº " + endereco.numero + "."
+                return frase
+            }
+
+            var resultado = exibeEndereco();
+            console.log(resultado)
+        </script>
+    </body>
+</html>
