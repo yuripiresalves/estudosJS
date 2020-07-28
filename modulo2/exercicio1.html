@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Curso Javascript</title>
+</head>
+
+<body>
+    <div id="app">
+        <button class="botao">Criar Quadrado</button>
+    </div>
+
+    <script>
+        var buttonElement = document.querySelector('#app button.botao');
+
+        buttonElement.onclick = criarQuadrado;
+
+        function criarQuadrado() {
+            var containerElement = document.querySelector('#app');
+
+            var quadrado = document.createElement('div');
+            quadrado.style.width = 100;
+            quadrado.style.height = 100;
+            quadrado.style.backgroundColor = 'red';
+            quadrado.style.marginTop = 5;
+            quadrado.style.marginBottom = 5;
+
+            containerElement.appendChild(quadrado);
+        }
+    </script>
+</body>
+
+</html>
