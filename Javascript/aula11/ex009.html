@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou não</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: rgb(37, 37, 37);
+            font: normal 15pt Arial;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div#app {
+            width: 400px;
+            height: 400px;
+            background-color: rgb(177, 38, 38);
+            border-radius: 16px;
+            margin-top: 200px;
+        }
+        div#app h1 {
+            text-align: center;
+            padding: 50px 30px;
+        }
+        div#app div#inputs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div#app input#pais {
+            width: 200px;
+            padding: 8px;
+            border-radius: 8px;
+            border: 0;
+            font-size: 14pt;
+        }
+        div#app input.botao {
+            width: 100px;
+            padding: 8px;
+            border-radius: 8px;
+            border: 0;
+            font-size: 14pt;
+            background-color: rgb(59, 59, 59);
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: .5s;
+        }
+        div#app input.botao:hover {
+            background-color: rgb(12, 12, 12);
+        }
+        div#res {
+            text-align: center;
+            margin-top: 50px;
+            color: rgb(7, 6, 6);
+        }      
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>BR ou não?</h1>
+        <div id="inputs">
+            <input type="text" name="pais" id="pais" placeholder="Digite seu país">
+            <input type="button" class="botao" value="Verificar">
+        </div>
+        <div id="res">
+    
+        </div>
+    </div>
+
+    <script>
+        var inputElement = document.querySelector('input#pais')
+        var divElement = document. querySelector('div#res')
+        var buttonElement = document.querySelector('input.botao')
+        buttonElement.addEventListener('click', verificar)
+
+        function verificar() {
+            if (inputElement.value == 'Brasil' || inputElement.value == 'brasil') {
+                divElement.innerHTML = '<p>Você é <strong>BRASILEIRO</strong>!</p>'
+            } else {
+                divElement.innerHTML = '<p>Você é <strong>ESTRANGEIRO</strong>!</p>'
+            }
+            inputElement.value = ''
+        }
+    </script>
+</body>
+</html>
